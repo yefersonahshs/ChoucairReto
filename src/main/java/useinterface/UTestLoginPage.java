@@ -46,23 +46,17 @@ public class UTestLoginPage {
 
 
 
-    public static final Target INPUT_PHONE =
-            Target.the("box Phone").located(By.xpath("//*[@id=\"mobile-device\"]/div[1]/div[2]/div/div[1]"));
+    public static final Target INPUT_PHONE = Target.the("box Phone").located(By.xpath("//*[@id=\"mobile-device\"]/div[1]/div[2]/div/div[1]"));
 
-    public static final Target LST_PHONE =
-            Target.the("list phone").locatedBy ("//div[contains(text(),'{0}')]");
+    public static final Target LST_PHONE = Target.the("list phone").locatedBy ("//div[contains(text(),'{0}')]");
 
-    public static final Target INPUT_MODEL =
-            Target.the("box model").located(By.xpath("//*[@id='mobile-device']/div[2]/div[2]/div/div[1]/span"));
+    public static final Target INPUT_MODEL = Target.the("box model").located(By.xpath("//*[@id='mobile-device']/div[2]/div[2]/div/div[1]/span"));
 
-    public static final Target LST_MODEL =
-            Target.the("List model").locatedBy ("//div[contains(text(),'{0}')]");
+    public static final Target LST_MODEL = Target.the("List model").locatedBy ("//div[contains(text(),'{0}')]");
 
-    public static final Target INPUT_SO =
-            Target.the(" SO").located(By.xpath("//*[@id='mobile-device']/div[3]/div[2]/div/div[1]/span"));
+    public static final Target INPUT_SO = Target.the(" SO").located(By.xpath("//*[@id='mobile-device']/div[3]/div[2]/div/div[1]/span"));
 
-    public static final Target LST_SO =
-            Target.the(" SO").locatedBy ("//div[contains(text(),'{0}')]");
+    public static final Target LST_SO = Target.the(" SO").locatedBy ("//div[contains(text(),'{0}')]");
 
 
 
@@ -81,6 +75,7 @@ public class UTestLoginPage {
             .located(By.id("laddaBtn"));
 
 
-
+    public static final Target CAPTCHA_UTEST = Target.the("Welcome")
+            .locatedBy("//*[@id='rc-imageselect']/div[2]/div[1]/div[1]/div/text()");
 
 }

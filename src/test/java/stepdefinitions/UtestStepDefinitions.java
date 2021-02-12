@@ -6,8 +6,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import model.UserInformation;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import questions.Answer;
 import tasks.LoginUser;
 import tasks.OpenUp;
 
@@ -29,7 +31,7 @@ public class UtestStepDefinitions {
 
 
     @When("^entering the data  from the uTest Resgistration form$")
-    public void enteringTheDataFromTheUTestResgistrationForm(List<UserInformation> userInformation) {
+    public void enteringTheDataFromTheUTestResgistrationForm(List<UserInformation> userInformation) throws  Exception{
           OnStage.theActorInTheSpotlight().attemptsTo(LoginUser.onThePage(userInformation.get(0).getName(),
                   userInformation.get(0).getLast_name(),userInformation.get(0).getEmail(),userInformation.get(0).getMonth_of_birth(),
                   userInformation.get(0).getDay_birth(),userInformation.get(0).getYear_birth(),userInformation.get(0).getCity(),userInformation.get(0).getPostal_code() , userInformation.get(0).getPhone(), userInformation.get(0).getModel_phone(), userInformation.get(0).getOperative_system(),
@@ -38,7 +40,8 @@ public class UtestStepDefinitions {
     }
 
     @Then("^he Know the funcionalities of the uTest$")
-    public void heKnowTheFuncionalitiesOfTheUTest() {
+    public void heKnowTheFuncionalitiesOfTheUTest(List<UserInformation> userInformation)throws  Exception {
+         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.tothe(userInformation.get(0).getWelcome())));
 
     }
 

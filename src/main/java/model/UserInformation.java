@@ -17,6 +17,18 @@ public class UserInformation {
   private String version_operative_system;
   private String password;
   private String password_confirmation;
+  private String welcome;
+
+
+
+    public String getWelcome() {
+        return welcome;
+    }
+
+    public void setWelcome(String welcome) {
+        this.welcome = welcome;
+    }
+
 
     public String getName() {
         return name;
