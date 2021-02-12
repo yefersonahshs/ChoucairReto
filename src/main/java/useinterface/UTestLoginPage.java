@@ -28,15 +28,6 @@ public class UTestLoginPage {
 
 
 
-
-
-   // public static  final Target INPUT_MONTH_OF_BIRTH = Target.the("where  do we  write the month of birth")
-     //       .locatedBy("//*[@id'birthMonth']/option[contains(text(),'{0}')]");
-    //public static  final Target INPUT_DAY_OF_BIRTH = Target.the("where  do we  write the day of the birth")
-      //      .locatedBy("//*[@id'birthDay']/option[contains(text(),'{0}')]");
-    //public static  final Target INPUT_YEAR_OF_BIRTH = Target.the("where  do we  write the year of birth")
-     //       .locatedBy("//*[@id'birthYear']/option[contains(text(),'{0}')]");
-
     public static final Target BUTTON_NEXT_LOCATION = Target.the("")
             .locatedBy("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[2]/a/span");
 
